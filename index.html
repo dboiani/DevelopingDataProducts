@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Visit Orlando Florida U.S.</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Visit Orlando Florida U.S.">
+  <meta name="author" content="A Shiny application developed by dboiani">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Visit Orlando Florida U.S.</h1>
+    <h2>Climate Data</h2>
+    <p>A Shiny application developed by dboiani<br/>for Coursera's Developing Data Products class project</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Are you traveling to Orlando Florida?</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>To visit Disney, Universal or another theme park?</li>
+<li>To attend the University of Central Florida?</li>
+<li>To the Kennedy Space Center to watch a rocket launch?</li>
+</ul>
+
+<h2>Are you curious about the weather?</h2>
+
+<ul>
+<li>How HOT does it get?</li>
+<li>How COLD does it get?</li>
+<li>How much does it RAIN?</li>
+</ul>
+
+<h2>Then try out this simple, easy to use Shiny application...</h2>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Features</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Defaults to the current Month
+
+<ul>
+<li>Graph displays the selected Month colored red</li>
+</ul></li>
+<li>Select the temperature/precipitation scale: 
+
+<ul>
+<li>Fahrenheit/Inches or Celsius/Millimeters</li>
+</ul></li>
+<li>Select the Month you wish to travel</li>
+</ul>
+
+<p><img src="OrlandoClimateTiny.png" alt="alt text"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>server.r Conversions</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">        # input monthly temperatures in Fahrenheit
+        tempHigh &lt;- c(71,73,77,82,88,91,92,92,89,84,78,72)
+        # converted to Celcius
+        round(((tempHigh-32)*5)/9, digits=1)
+</code></pre>
+
+<pre><code>##  [1] 21.7 22.8 25.0 27.8 31.1 32.8 33.3 33.3 31.7 28.9 25.6 22.2
+</code></pre>
+
+<pre><code class="r">        # input monthly precipitation in Inches
+        precipitation &lt;- c(2.76,2.83,3.78,2.48,3.31,8.74,7.09,7.83,6.02,3.31,2.4,2.64)
+        # converted to Millimeters
+        round(precipitation*25.4, digits=0)
+</code></pre>
+
+<pre><code>##  [1]  70  72  96  63  84 222 180 199 153  84  61  67
+</code></pre>
+
+<h1>Source:</h1>
+
+<p><a href="http://www.usclimatedata.com/climate/orlando/florida/united-states/usfl1021">http://www.usclimatedata.com/climate/orlando/florida/united-states/usfl1021</a></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Use the application here:</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><a href="https://dsdboiani.shinyapps.io/DevelopingDataProductsProject/">https://dsdboiani.shinyapps.io/DevelopingDataProductsProject/</a></p>
+
+<ul>
+<li>Requires a newer browser </li>
+<li>May take a few minutes to load</li>
+</ul>
+
+<p><img src="OrlandoClimateSlide.png" alt="alt text"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Are you traveling to Orlando Florida?'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Features'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='server.r Conversions'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Use the application here:'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
